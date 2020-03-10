@@ -1,0 +1,35 @@
+﻿<Window x:Class="TennisClubHTK.GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TennisClubHTK.GUI"
+        mc:Ignorable="d"
+        Title="Tennisklubben HTK" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TabControl BorderBrush="Red" BorderThickness="1">
+            <TabItem x:Name="ReservationsTabItem">
+                <TabItem.Header>
+                    <Label Content="Reservationer" 
+                           MouseLeftButtonDown="Label_MouseLeftButtonDown"/>
+                </TabItem.Header> 
+            </TabItem>
+
+            <TabItem x:Name="MembersTabItem">
+                <TabItem.Header>
+                    <Label Content="Medlemmer" MouseLeftButtonDown="Label_MouseLeftButtonDown_1" 
+                           />
+                </TabItem.Header>
+            </TabItem>
+
+        </TabControl>
+
+        <UserControl x:Name="DetailsUserControls"
+                     Grid.Row="1"
+                     Margin="5"/>
+    </Grid>
+</Window>
