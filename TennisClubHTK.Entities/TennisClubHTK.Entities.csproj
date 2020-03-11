@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AgeGroup.cs" />
+    <Compile Include="Field.cs" />
+    <Compile Include="FieldReservation.cs" />
     <Compile Include="Gender.cs" />
     <Compile Include="Member.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

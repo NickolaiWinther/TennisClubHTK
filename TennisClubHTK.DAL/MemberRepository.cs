@@ -11,12 +11,14 @@ namespace TennisClubHTK.DAL
     public class MemberRepository : BaseRepository
     {
         public List<Member> GetAllMembers() 
-            => HandleDate(ExecuteQuery("SELECT * FROM Members ORDER BY Active DESC"));
+            => HandleData(ExecuteQuery("SELECT * FROM Members ORDER BY Active DESC"));
 
 
+        public Member GetMemberById(int id)
+            => HandleData(ExecuteQuery($"SELECT * FROM Members WHERE id = {id}")).FirstOrDefault();
 
 
-        private List<Member> HandleDate(DataTable dataTable)
+        private List<Member> HandleData(DataTable dataTable)
         {
             List<Member> members = new List<Member>();
 
@@ -43,7 +45,5 @@ namespace TennisClubHTK.DAL
 
             return members;
         }
-
-        
     }
 }

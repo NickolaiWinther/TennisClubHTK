@@ -11,7 +11,7 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TabControl BorderBrush="Red" BorderThickness="1">
+        <TabControl>
             <TabItem x:Name="ReservationsTabItem">
                 <TabItem.Header>
                     <Label Content="Reservationer" 
